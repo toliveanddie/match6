@@ -1,0 +1,15 @@
+<% @picks = ppicks %>
+<% i=0 %>
+
+<h1> powerball picks </h1>
+<table>
+  <% @picks.each do |pick| %>
+    <tr>
+      <td><%= row_heads[i] %></td>
+      <% pick.each do |key, value| %>
+        <td><p><%= key %>: <small><%= value %></small></p></td>
+      <% end %>
+      <% i+=1 %>
+    </tr>
+  <% end %>
+</table>

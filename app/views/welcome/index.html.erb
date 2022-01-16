@@ -1,0 +1,12 @@
+<% @picks = picks %>
+<h1>Match 6 picks </h1>
+
+<table>
+  <% @picks.each do |pick| %>
+    <tr>
+      <% pick.each do |key, value| %>
+        <td><p><%= key %>: <small><%= value %></small></p></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
