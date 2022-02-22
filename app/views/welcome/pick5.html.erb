@@ -1,0 +1,14 @@
+<h1>Pick 5</h1>
+<% @pick5 = pick5 %>
+
+
+<table>
+  <% @pick5.each do |pool, total| %>
+    <tr>
+      <td>Draws: <%= total %></td>
+      <% pool.each do |key, value| %>
+        <td><h4><strong><%= key %></strong><small><%= value %></small></h4></td>
+      <% end %>
+    </tr>
+  <%end%>
+<table>
