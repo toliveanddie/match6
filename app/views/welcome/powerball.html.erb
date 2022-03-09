@@ -2,12 +2,12 @@
 <% i=0 %>
 
 <h1> powerball picks </h1>
-<table>
+<table class="table table-condensed">
   <% @picks.each do |pick| %>
     <tr>
-      <td><%= row_heads[i] %></td>
+      <td><h3><%= row_heads[i] %></h3></td>
       <% pick.each do |key, value| %>
-        <td><p><%= key %>: <small><%= value %></small></p></td>
+        <td><h3><%= key %>: <small><%= value %></small></h3></td>
       <% end %>
       <% i+=1 %>
     </tr>

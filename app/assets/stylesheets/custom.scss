@@ -1,0 +1,13 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: black;
+}
+
+h3 {
+  color: white;
+  small {
+    color: red;
+  }
+}

@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- small {
-   color: yellow;
- }
-
-h4 {
-  color: yellow
-}

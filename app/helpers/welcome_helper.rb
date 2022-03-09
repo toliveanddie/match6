@@ -73,7 +73,7 @@ module WelcomeHelper
     100.times do |i|
       draws.push(results.shift(5))
       results.shift(1)
-      break if draws.flatten.uniq.length >= 69
+      break if draws[i].length < 5
     end
 
     num_draws["draws"] = draws.length
@@ -178,6 +178,8 @@ module WelcomeHelper
     return pools
 
   end
+
+  ###################### pick 5 #########################################
 
   def pick5
     doc = Nokogiri::HTML(URI.open('https://www.lotteryusa.com/pennsylvania/pick-5/year'))

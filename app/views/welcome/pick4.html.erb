@@ -2,13 +2,13 @@
 <% @pick4 = pick4 %>
 
 
-<table>
+<table class="table table-condensed">
   <% @pick4.each do |pool, total| %>
     <tr>
-      <td>Draws: <%= total %></td>
+      <td><h3>Draws: <%= total %></h3></td>
       <% pool.each do |key, value| %>
-        <td><h4><strong><%= key %></strong></h4></td>
+        <td><h3><strong><%= key %></strong></h3></td>
       <% end %>
     </tr>
-  <%end%>
-<table>
+  <% end %>
+</table>
