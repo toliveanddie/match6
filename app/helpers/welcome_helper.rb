@@ -20,7 +20,7 @@ module WelcomeHelper
     #push numbers into array and only get enough so that all numbers are accounted for
     100.times do |i|
       draws.push(results.shift(6))
-      break if draws[i].length < 6
+      break if draws.flatten.uniq.length >= 49
     end
 
     draw_length["Draws"] = draws.length
@@ -31,7 +31,7 @@ module WelcomeHelper
       end
     end
 
-    latest_draws = draws.shift(7)
+    latest_draws = draws.shift(4)
 
     latest_draws.each do |draw|
       draw.each do |pick|
@@ -73,7 +73,7 @@ module WelcomeHelper
     100.times do |i|
       draws.push(results.shift(5))
       results.shift(1)
-      break if draws[i].length < 5
+      break if draws.flatten.uniq.length >= 69
     end
 
     num_draws["draws"] = draws.length
@@ -84,7 +84,7 @@ module WelcomeHelper
       end
     end
 
-    latest_draws = draws.shift(13)
+    latest_draws = draws.shift(7)
 
     latest_draws.each do |draw|
       draw.each do |pick|
