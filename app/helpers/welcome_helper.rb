@@ -31,7 +31,7 @@ module WelcomeHelper
       end
     end
 
-    latest_draws = draws.shift(4)
+    latest_draws = draws.shift(7)
 
     latest_draws.each do |draw|
       draw.each do |pick|
@@ -84,7 +84,7 @@ module WelcomeHelper
       end
     end
 
-    latest_draws = draws.shift(7)
+    latest_draws = draws.shift(14)
 
     latest_draws.each do |draw|
       draw.each do |pick|
