@@ -31,17 +31,17 @@ module WelcomeHelper
       end
     end
 
-    #latest_draws = draws.shift(7)
+    latest_draws = draws.shift(1)
 
-    #latest_draws.each do |draw|
-      #draw.each do |pick|
-        #picked.delete_if {|k,v| k == pick}
-      #end
-    #end
+    latest_draws.each do |draw|
+      draw.each do |pick|
+        picked.delete_if {|k,v| k == pick}
+      end
+    end
 
     val = picked.values
     val.sort!
-    picked.delete_if {|k,v| v < val.last(7).first}
+    picked.delete_if {|k,v| v < val.last(12).first}
     totals.push(picked)
     totals.push(draw_length)
 
@@ -84,17 +84,17 @@ module WelcomeHelper
       end
     end
 
-    #latest_draws = draws.shift(14)
+    latest_draws = draws.shift(2)
 
-    #latest_draws.each do |draw|
-      #draw.each do |pick|
-        #picked.delete_if {|k,v| k === pick}
-      #end
-    #end
+    latest_draws.each do |draw|
+      draw.each do |pick|
+        picked.delete_if {|k,v| k === pick}
+      end
+    end
 
     val = picked.values
     val.sort!
-    picked.delete_if {|k,v| v < val.last(6).first}
+    picked.delete_if {|k,v| v < val.last(10).first}
 
     #########################bonus ball####################################
   
