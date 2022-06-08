@@ -31,13 +31,13 @@ module WelcomeHelper
       end
     end
 
-    latest_draws = draws.shift(7)
+    #latest_draws = draws.shift(7)
 
-    latest_draws.each do |draw|
-      draw.each do |pick|
-        picked.delete_if {|k,v| k == pick}
-      end
-    end
+    #latest_draws.each do |draw|
+      #draw.each do |pick|
+        #picked.delete_if {|k,v| k == pick}
+      #end
+    #end
 
     val = picked.values
     val.sort!
